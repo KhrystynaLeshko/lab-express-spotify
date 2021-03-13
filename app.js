@@ -47,6 +47,18 @@ app.get("/artist-search", (req, res) => {
     );
 });
 
+// Route to albums page
+app.get("/albums/:artistId", (req, res) => {
+  // .getArtistAlbums() code goes here
+  console.log("this is albums search page");
+  const artistId = req.params.artistId;
+  spotifyApi.getArtistAlbums(artistId).then((data) => {
+    console.log("The received data from the API for albums: ", data.body);
+    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    res.render("albums", data.body);
+  });
+});
+
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 );

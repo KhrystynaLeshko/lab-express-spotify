@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search Results</title>
+  <title>Albums</title>
 </head>
 
 <body>
 
   <ul>
 
-    {{#each artist}}
+    {{#each items}}
 
     <li>
 
@@ -20,14 +20,13 @@
 
       <img src="{{this.images.0.url}}" width="100px" />
 
-      <a href="/albums/{{this.id}}">View Albums</a>
+      <a href="/albums/tracks{{this.id}}">View Tracks</a>
 
     </li>
 
     {{/each}}
 
   </ul>
-
 </body>
 
 </html>
