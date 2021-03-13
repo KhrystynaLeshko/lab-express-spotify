@@ -68,6 +68,7 @@ app.get("/albums/:artistId", (req, res) => {
 app.get("/albums/tracks/:albumID", (req, res) => {
   console.log("this is tracks page");
   const albumID = req.params.albumID;
+  console.log(albumID);
   // .getAlbumTracks() code goes here
   spotifyApi
     .getAlbumTracks(albumID, { limit: 5, offset: 1 })
