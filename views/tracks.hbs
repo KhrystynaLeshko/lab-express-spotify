@@ -13,8 +13,12 @@
     {{#each items}}
     <li>
       <div>
-        {{this.name}}
-        {{!-- add audio --}}
+        <h2>{{this.name}}</h2>
+
+        <audio controls src="{{ preview_url }}">
+          Your browser does not support the
+          <code>audio</code> element.
+        </audio>
       </div>
     </li>
     {{/each}}
